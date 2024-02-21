@@ -20,5 +20,6 @@ class Test1{
     public static void main(String[] args) {
         TStudent t1 = new TStudent(111,"abdul",123.0f);
         t1.display();
+
     }
 }

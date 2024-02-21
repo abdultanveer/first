@@ -3,6 +3,9 @@
 public class Main {
 
     public static void main(String[] args) {
+        Gst  gst = new Gst();
+       int tax= gst.calculateTax(1000);
+        System.out.println("tax="+ tax);
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!");
