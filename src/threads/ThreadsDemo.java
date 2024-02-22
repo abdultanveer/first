@@ -2,6 +2,29 @@ package threads;
 
 public class ThreadsDemo {
     public static void main(String[] args) {
+        ThreadJoin th1 = new ThreadJoin();
+        ThreadJoin th2 = new ThreadJoin();
+        ThreadJoin th3 = new ThreadJoin();
+
+        th1.start();
+
+        try {
+            th1.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        th2.start();
+
+        try {
+            th2.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        th3.start();
+
+
+/*
+
         RThread rThread = new RThread();
         Thread t1  = new Thread(rThread);
         t1.start();
@@ -22,6 +45,7 @@ public class ThreadsDemo {
             }
             System.out.println(Thread.currentThread().getName()+"-"+i*1000);
         }
+*/
 
     }
 }
