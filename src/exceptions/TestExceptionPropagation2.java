@@ -5,9 +5,19 @@ import java.io.IOException;
 class TestExceptionPropagation2{
   void m()throws IOException {
       int  c = 10 +  20;
+      someOtherMethod();
       throw new java.io.IOException("device error");//checked exception
-  }  
-  void n()  throws IOException{
+  }
+
+    private void someOtherMethod() {
+      int j = 20+ 30;
+      for (int i=0; i<3;i++){
+          int k = i  * j;
+          System.out.println(i);
+      }
+    }
+
+    void n()  throws IOException{
 
       m();
   }  
