@@ -2,8 +2,10 @@ package threads;
 
 public class ThreadsDemo {
     public static void main(String[] args) {
-        MyThread mt = new MyThread();
-        mt.start();
+        MyThread dbT = new MyThread("dbThread",10);
+        dbT.start();
+        MyThread netT = new MyThread("netThread", 100);
+        netT.start();
 
         for(int i=1;i<5;i++){
             try {
@@ -11,7 +13,7 @@ public class ThreadsDemo {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(i*10);
+            System.out.println(Thread.currentThread().getName()+"-"+i*1000);
         }
 
     }
