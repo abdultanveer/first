@@ -30,5 +30,6 @@ class TestExceptionPropagation2{
    TestExceptionPropagation2 obj=new TestExceptionPropagation2();  
    obj.p();  
    System.out.println("normal flow");  
-  }  
-}  
+  }
+
+}
